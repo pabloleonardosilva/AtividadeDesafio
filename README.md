@@ -1,6 +1,7 @@
 # AtividadeDesafio
 
-//Carolina Mascarenhas
+// Carolina Mascarenhas - cadastro de Produtos
+
 import java.util.*;
 
 public class Cadastro_Produtos2 {
@@ -52,4 +53,49 @@ public class Cadastro_Produtos2 {
 		
 }
 
-// Arthur Teixeira
+// Arthur Teixeira - Cadastro de Pessoas
+
+// entrada de dados
+    int quantCad; // VARIAVEL
+
+    System.out.println("Digite Quantos Clientes quer Cadastrar: ");
+    quantCad  = leia.nextInt(); 
+
+    // VARIAVEIS CADASTRO
+    int i = 0  ;    //Contador do Cadastro
+    String [][] cadastroCliente = new String [quantCad][2];   // Matriz
+
+    // entrada de dados - LOOP
+
+    for (i = 0; i < cadastroCliente.length; i++) {
+
+
+        System.out.println("Digite o código do Cliente " + i + " (* FIM * PARA ENCERRAR CADASTRO): ");
+        cadastroCliente[i][0] = leia.next();
+
+        if (cadastroCliente[i][0].equalsIgnoreCase("FIM")) {
+            break;
+        }
+
+        System.out.println("Digite o nome do Cliente " + i + " (* FIM * PARA ENCERRAR CADASTRO): ");
+        cadastroCliente[i][1] = leia.next();
+
+        if (cadastroCliente[i][0].equalsIgnoreCase("FIM")) {
+            break;
+        }
+
+        System.out.println();
+
+        System.out.println("Cadastro de número " + i + " Concluído");
+
+        System.out.println();
+
+        if (cadastroCliente[i][1].equalsIgnoreCase("FIM")) {
+            break;
+        }
+
+    }
+
+    System.out.println("Cadastro Finalizado/Interrompido"); 
+
+// Camila Costa
