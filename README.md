@@ -107,4 +107,23 @@ public static void main(String[] args) {
 
     }
     }
-// Camila Costa
+/** CAMILA COSTA **/
+
+    System.out.println(); // SOMENTE PARA DAR ESPAÇO
+    System.out.println("LISTAS DE CLIENTES");
+
+    int idx = 0;
+    for (String[] c : cadastroCliente) {
+        System.out.println("Cliente: " + c[0] + "-" + c[1]);
+    }
+
+    System.out.println(); // SOMENTE PARA DAR ESPAÇO
+    System.out.println("LISTAS DE PRODUTOS");
+    idx = 0;
+    for (String[] p : produtosCodNome) {            
+        System.out.println("Produto: " + p[0] + "-" + p[1] + " Valor: " + produtosValor[idx]);
+        idx++;
+    }       
+    leia.close();
+}
+}
