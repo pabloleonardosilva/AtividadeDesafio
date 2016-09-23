@@ -128,21 +128,18 @@ public static void main(String[] args) {
 }
 }
 
-//--- LUIBIA TORRES --- //
+/* LUIBIA TORRES - PROCESSO DE VENDAS */
 
-public class CadastroPessoas {
-public static void main(String[] args) {
-
-int x=0; // utilizado no for 
-int quantidade=0; //controlar quant de produtos a vender
-float totalValorVendas= 0; // total a pagar 
-boolean encontrou; //ref pesquisa
-String texto; // texto scanner 
-String textoMais=null; // texto scanner add produtos 
+int x=0;
+int quantidade=0;
+float totalValorVendas= 0;
+boolean encontrou; 
+String texto;
+String textoMais=null;
 String produtosVendidos[][]= new String[300][3]; 
-//PARA TESTAR A MATRIZ  EDITE P/ TAMANHO [3],[3] PORQUE ESTÁ COM 300 COMO FOI PEDIDO;
 String clienteVendas[][]= new String[300][2]; 
-//PARA TESTAR A MATRIZ  EDITE P/ TAMANHO [3],[2] PORQUE ESTÁ COM 300 COMO FOI PEDIDO;
+
+//PARA TESTAR A MATRIZ  EDITE P/ TAMANHO [3],[] PORQUE ESTÁ COM 300 COMO FOI PEDIDO;
 
 System.out.println();
 
