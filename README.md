@@ -164,7 +164,7 @@ do {
 				 				 
 				 if (texto.equalsIgnoreCase(produtosCodNome[x][1])) {
 					encontrou=true;
-					produtosVendidos[x][1]=produtosCodNome[x][1]; //+ produtosValor[x]; //teste
+					produtosVendidos[x][1]=produtosCodNome[x][1];
 					break;
 				 	} 
 				}
@@ -206,23 +206,19 @@ do {
 				System.out.println("Cliente ("+ clienteVendas[x][1] + ") encontrado");
 			
 			}	
-		
-		
 	//Realizar Vendas
 				
 	 if(textoMais.equalsIgnoreCase("sim"))  {System.out.print(" ");}	
 			
 	 else { System.out.println("Conferir o(s) produto(s)");
 	 	for(int n=0; n < produtosVendidos.length; n++) { 
-	 		System.out.println("Produto " + produtosVendidos[n][1] + " para o cliente " + (clienteVendas[x][1]));}
+	 		System.out.println("Produto " + produtosVendidos[n][1] + "  Quantidade: " + quantidade +" para o cliente " + (clienteVendas[x][1]));}
 	 	System.out.println("Confirmar venda? SIM ou NAO: ");
 	 	texto=leia.next();
 	if(texto.equalsIgnoreCase("SIM")){ System.out.println("O total do valor das vendas é R$ " + totalValorVendas);
 		} else{ System.out.println("Venda cancelada");
 		break;}
 	 }
-	 	  //"? ('SIM' para confirmar)");
-	 		
 	
 } while (texto!="FIM");
 
@@ -232,6 +228,8 @@ System.out.println("Finalizado com sucesso");
 
 	}
 }
+
+
 
 //MENU PABLO import java.util.Scanner; public class TrabalhoATP {
 
