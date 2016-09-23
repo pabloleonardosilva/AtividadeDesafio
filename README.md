@@ -141,19 +141,20 @@ String clienteVendas[][]= new String[300][2];
 
 //PARA TESTAR A MATRIZ  EDITE P/ TAMANHO [3],[] PORQUE ESTÁ COM 300 COMO FOI PEDIDO;
 
+
 System.out.println();
 
 do {
 	encontrou=false;
 	textoMais=null;
-		
+	System.out.println();	
 	System.out.print ("Digite o Nome do produto a vender ('FIM' para encerrar): ");
-		texto = leia.next();
+	texto = leia.next();
 			if(texto.equalsIgnoreCase("FIM")) { System.out.println("Encerrado com sucesso");
 			break; }
 	
 	System.out.print ("Informe a quantidade desejada: ");
-		quantidade=leia.nextInt();
+	quantidade=leia.nextInt();
 			while(quantidade==0) { System.out.println("Informe a quantidade acima de zero");
 			quantidade=leia.nextInt();
 			}
@@ -164,26 +165,31 @@ do {
 				 				 
 				 if (texto.equalsIgnoreCase(produtosCodNome[x][1])) {
 					encontrou=true;
-					produtosVendidos[x][1]=produtosCodNome[x][1];
+					produtosVendidos[x][0]=produtosCodNome[x][1];
+					produtosVendidos[x][1]=String.valueOf(produtosValor[x]);
+					produtosVendidos[x][2]=String.valueOf(quantidade);
 					break;
 				 	} 
 				}
 			 
-			 	System.out.println("Produto encontrado - "  + produtosVendidos[x][1] + "  " + produtosValor[x] );
+			 	System.out.println("Produto encontrado - "  + produtosVendidos[x][0] + " R$ " + produtosVendidos[x][1]) ;
 				System.out.println("total a pagar: R$ " + (quantidade * produtosValor[x]));
 				totalValorVendas= totalValorVendas + (quantidade * produtosValor[x]);
 				
 			if (encontrou=false) {System.out.println("Produto não cadastrado");
-	 			System.out.println("Deseja procurar outro produto? (Sim para continuar...  )");
+			System.out.println();
+	 			System.out.print("Deseja procurar outro produto? (Sim para continuar...  )");
 				textoMais=leia.next();
-	 				if(textoMais.equalsIgnoreCase("SIM")) { System.out.println("Escolha outro produto ... ");
+	 				if(textoMais.equalsIgnoreCase("SIM")) { System.out.println(" ");
 	 				} else { break; } 
 				}
 	 		
-			else { System.out.println("Deseja acrescentar produtos? (SIM ou NAO:) ");
-			textoMais=leia.next();
+			else { System.out.println();
+				System.out.print("Deseja acrescentar produtos? (SIM ou NAO:) ");
+				textoMais=leia.next();
 				if(textoMais.equalsIgnoreCase("SIM")) { System.out.println(" Escolha outro produto ... ");
 				} else if(textoMais.equalsIgnoreCase("Nao")) { 
+				System.out.println();
 				System.out.println("Prosseguir com a compra ..."); 
 				}
 				}
@@ -194,7 +200,7 @@ do {
 		 else { System.out.print("Digite o nome do Cliente: ");	
 				texto=leia.next();
 			
-				for( x=0; x < cadastroCliente.length; x++) {
+				for(x=0; x < cadastroCliente.length; x++) {
 				 				
 				if (texto.equals(cadastroCliente[x][1])) {
 				encontrou=true;
@@ -204,34 +210,42 @@ do {
 				}
 				
 				System.out.println("Cliente ("+ clienteVendas[x][1] + ") encontrado");
+				System.out.println(); //pular linha
 			
 			}	
+		
 	//Realizar Vendas
 				
 	 if(textoMais.equalsIgnoreCase("sim"))  {System.out.print(" ");}	
 			
 	 else { System.out.println("Conferir o(s) produto(s)");
+	 System.out.println(); //pular linha
+	 System.out.println("Produto(s)   Valor   Quantidade    Cliente");
 	 	for(int n=0; n < produtosVendidos.length; n++) { 
-	 		System.out.println("Produto " + produtosVendidos[n][1] + "  Quantidade: " + quantidade +" para o cliente " + (clienteVendas[x][1]));}
-	 	System.out.println("Confirmar venda? SIM ou NAO: ");
-	 	texto=leia.next();
-	if(texto.equalsIgnoreCase("SIM")){ System.out.println("O total do valor das vendas é R$ " + totalValorVendas);
+	 		System.out.println(produtosVendidos[n][0] + "       "+  produtosVendidos[n][1] + "       " + produtosVendidos[n][2] + "          "+ (clienteVendas[x][1]));}
+	System.out.println();//pular linha	
+	System.out.println("Confirmar venda? SIM ou NAO: ");
+	texto=leia.next();
+		if(texto.equalsIgnoreCase("SIM")) { System.out.println("O total do valor das vendas é R$ " + totalValorVendas);
 		} else{ System.out.println("Venda cancelada");
 		break;}
 	 }
 	
 } while (texto!="FIM");
 
+if(texto.equalsIgnoreCase("nao")){
+System.out.println("Finalizado com sucesso");
+
+} else {
 System.out.println("o total vendido foi: " + totalValorVendas);
 System.out.println();
 System.out.println("Finalizado com sucesso");
-
+}
 	}
 }
 
 
-
-//MENU PABLO import java.util.Scanner; public class TrabalhoATP {
+////MENU PABLO import java.util.Scanner; public class TrabalhoATP {
 
 public static void main(String[] args) {
     // TODO Auto-generated method stub
