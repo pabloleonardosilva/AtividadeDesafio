@@ -244,6 +244,30 @@ System.out.println("Finalizado com sucesso");
 	}
 }
 
+//* Alessandro Bax - Relatorio geral de vendas */
+
+float totalVenda; String relatorioGeralVendas [][]; float valorTotalVendas;
+
+System.out.print ("Relatorio geral de Vendas: ") System.out.println ("Produtos Valor Venda Total")
+
+for (i=0; i < relatorioGeralVendas.length; i++) {
+
+//Produtos "produtosCodNome" - matriz produtosVendidos Luibia
+
+ relatorioGeralVendas [i][0] = produtosVendidos [i][0]
+//Valor total da venda - variaveis luibia
+
+ relatorioGeralVendas [i][1] = String.valueOf((produtosValor[i]*quantidade)) 
+//Valor total de vendas - somatorio de todas as vendas
+
+ if (i = 0) { 
+ relatorioGeralVendas [i][2] = relatorioGeralVendas [i][1]}
+ else {
+ relatorioGeralVendas [i][2] = 
+ String.valueOf((relatorioGeralVendas [i-1][1] + relatorioGeralVendas [i][1]} 
+
+ break;}
+
 
 ////MENU PABLO import java.util.Scanner; public class TrabalhoATP {
 
